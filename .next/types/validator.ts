@@ -47,28 +47,28 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
 }
 
 
+// Validate ../../app/dashboard/(overview)/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/dashboard">> = Specific
+  const handler = {} as typeof import("../../app/dashboard/(overview)/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../app/dashboard/customers/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/dashboard/customers">> = Specific
-  const handler = {} as typeof import("../../app/dashboard/customers/page.jsxrs/page.js")
+  const handler = {} as typeof import("../../app/dashboard/customers/page.js")
   type __Check = __IsExpected<typeof handler>
   // @ts-ignore
   type __Unused = __Check
 }
 
-// Validate ../../app/dashboard/page.tsx
+// Validate ../../app/dashboard/invoices/page.tsx
 {
-  type __IsExpected<Specific extends AppPageConfig<"/dashboard">> = Specific
-  const handler = {} as typeof import("../../app/dashboard/page.js")
-  type __Check = __IsExpected<typeof handler>
-  // @ts-ignore
-  type __Unused = __Check
-}
-
-// Validate ../../app/invoices/page.tsx
-{
-  type __IsExpected<Specific extends AppPageConfig<"/invoices">> = Specific
-  const handler = {} as typeof import("../../app/dashboard/invoices/page.jsx")
+  type __IsExpected<Specific extends AppPageConfig<"/dashboard/invoices">> = Specific
+  const handler = {} as typeof import("../../app/dashboard/invoices/page.js")
   type __Check = __IsExpected<typeof handler>
   // @ts-ignore
   type __Unused = __Check
@@ -104,6 +104,15 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
 
 
 
+
+// Validate ../../app/dashboard/layout.tsx
+{
+  type __IsExpected<Specific extends LayoutConfig<"/dashboard">> = Specific
+  const handler = {} as typeof import("../../app/dashboard/layout.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
 
 // Validate ../../app/layout.tsx
 {
